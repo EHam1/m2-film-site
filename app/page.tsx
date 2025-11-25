@@ -1,65 +1,140 @@
-import Image from "next/image";
+import DownloadButton from '@/components/DownloadButton'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-cream">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="container mx-auto px-6 py-20 text-center">
+          <h1 className="hero-title">
+            M2 Film
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="hero-subtitle">
+            Metadata Editor for Film Photographers
+          </p>
+          <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-2xl mx-auto">
+            Bulk edit EXIF metadata on your scanned film photos. 
+            Add timestamps, locations, film stock, and camera info in one click.
+          </p>
+          
+          <DownloadButton />
+          
+          <p className="mt-6 text-sm text-gray-600">
+            Free download • macOS 10.15+
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="section-title">Features</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="feature-card">
+              <div className="feature-icon">📸</div>
+              <h3 className="feature-title">Batch Editing</h3>
+              <p className="feature-description">
+                Edit metadata for hundreds of photos at once. Perfect for organizing entire rolls.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">🗺️</div>
+              <h3 className="feature-title">Location Search</h3>
+              <p className="feature-description">
+                Add GPS coordinates by searching for places. Your photos show up on the map.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">🎞️</div>
+              <h3 className="feature-title">Film Stock & Camera</h3>
+              <p className="feature-description">
+                Tag your photos with film stock and camera info. Search your archive later.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">⏰</div>
+              <h3 className="feature-title">Timestamps</h3>
+              <p className="feature-description">
+                Set correct dates and times. Your photos appear in chronological order.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">💾</div>
+              <h3 className="feature-title">Safe Backups</h3>
+              <p className="feature-description">
+                Automatic backups before any changes. Your originals are always safe.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">🎨</div>
+              <h3 className="feature-title">Retro UI</h3>
+              <p className="feature-description">
+                Beautiful vintage interface that celebrates analog photography.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* Pro Version CTA */}
+      <section className="py-20 bg-gradient-to-br from-teal-400 to-yellow-400">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Pro Version Coming Soon
+          </h2>
+          <p className="text-xl text-gray-800 mb-8 max-w-2xl mx-auto">
+            Advanced features like preset management, batch rename, and cloud backup.
+          </p>
+          <form className="max-w-md mx-auto flex gap-3">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="flex-1 px-6 py-3 rounded-lg border-2 border-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500"
+            />
+            <button className="btn-primary">
+              Notify Me
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-lg font-bold mb-4">M2 Film</p>
+          <div className="flex justify-center gap-6 mb-6">
+            <Link href="/download" className="hover:text-teal-400 transition">
+              Download
+            </Link>
+            <a 
+              href="https://github.com/eham1/m2-film-app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-teal-400 transition"
+            >
+              GitHub
+            </a>
+            <a 
+              href="https://github.com/eham1/m2-film-app/issues" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-teal-400 transition"
+            >
+              Support
+            </a>
+          </div>
+          <p className="text-sm text-gray-400">
+            © 2024 M2 Film • Made for film photographers
+          </p>
+        </div>
+      </footer>
+    </main>
+  )
 }
