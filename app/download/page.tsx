@@ -28,37 +28,44 @@ export default function Download() {
 
           <div className="prose prose-lg">
             <h2>Installation Instructions</h2>
-            
-            <h3>Quick Install (2 Steps)</h3>
-            <ol>
-              <li>Download the <code>.dmg</code> or <code>.zip</code> file above</li>
-              <li>If using DMG: Open it and drag <strong>M2 Film</strong> to Applications</li>
-              <li>If using ZIP: Unzip and drag <strong>M2 Film.app</strong> to Applications</li>
-              <li><strong>Right-click</strong> the app in Applications and select <strong>Open</strong></li>
-              <li>Click <strong>Open</strong> in the security dialog</li>
-              <li>Done! Future opens will work normally</li>
-            </ol>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
-              <p className="font-semibold">⚠️ Why Your Mac Will Yell at You</p>
+              <p className="font-semibold text-lg">⚠️ Why Your Mac Will Block This App</p>
               <p className="text-sm mt-2">
                 Look, I&apos;m a bum who doesn&apos;t have an Apple Developer account ($99/year) to 
-                &quot;sign&quot; this app properly. So when you download M2 Film, macOS will quarantine it and 
-                throw up scary warnings. <strong>The app is completely safe</strong> — it&apos;s{' '}
+                &quot;sign&quot; this app properly. So macOS will quarantine it and say it&apos;s &quot;damaged.&quot;
+                {' '}<strong>The app is completely safe</strong> — it&apos;s{' '}
                 <a href="https://github.com/eham1/m2-film-app" 
-                target="_blank" rel="noopener noreferrer" className="text-teal-600 underline">fully open source</a> 
-                {' '}so you can inspect every line of code. Just <strong>right-click → Open</strong> to bypass 
-                the Gatekeeper check and you&apos;re golden.
+                target="_blank" rel="noopener noreferrer" className="text-teal-600 underline font-semibold">fully open source</a> 
+                {' '}so you can inspect every line of code.
+              </p>
+            </div>
+            
+            <h3>Step 1: Download and Install</h3>
+            <ol>
+              <li>Download the <code>.dmg</code> or <code>.zip</code> file above</li>
+              <li>If using DMG: Open it and drag <strong>M2 Film</strong> to Applications folder</li>
+              <li>If using ZIP: Unzip it and drag <strong>M2 Film.app</strong> to Applications folder</li>
+            </ol>
+
+            <h3>Step 2: Remove the Quarantine Flag (REQUIRED)</h3>
+            <p className="font-semibold">
+              macOS will block the app from opening. You MUST run this Terminal command:
+            </p>
+            <div className="bg-red-50 border-2 border-red-400 p-4 rounded my-4">
+              <p className="text-sm font-semibold mb-2">Open Terminal and paste this:</p>
+              <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm">
+                xattr -cr &quot;/Applications/M2 Film.app&quot;
+              </pre>
+              <p className="text-xs text-gray-600 mt-2">
+                Press Enter. No output = success. This removes the quarantine flag.
               </p>
             </div>
 
-            <h3>If Right-Click Doesn&apos;t Work</h3>
-            <p>Open Terminal and run:</p>
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto">
-              xattr -cr &quot;/Applications/M2 Film.app&quot;
-            </pre>
-            <p className="text-sm text-gray-600 mt-2">
-              This removes the macOS quarantine flag. Then open the app normally.
+            <h3>Step 3: Launch</h3>
+            <p>
+              Now open <strong>M2 Film</strong> from Applications. It should launch normally.
+              Future opens won&apos;t require any special steps!
             </p>
 
             <h3>System Requirements</h3>
