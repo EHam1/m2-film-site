@@ -22,36 +22,48 @@ export default function Download() {
             <h2 className="text-2xl font-bold mb-4">Latest Version</h2>
             <DownloadButton />
             <p className="mt-4 text-sm text-gray-600">
-              Version 1.0.0 • macOS 10.15 or later
+              Version 1.0.0 • macOS 11.0 (Big Sur) or later • Apple Silicon (M1/M2/M3)
             </p>
           </div>
 
           <div className="prose prose-lg">
             <h2>Installation Instructions</h2>
             
-            <h3>First Time Opening</h3>
+            <h3>Quick Install (2 Steps)</h3>
             <ol>
-              <li>Download the <code>.dmg</code> file above</li>
-              <li>Open the downloaded file</li>
-              <li>Drag <strong>M2 Film</strong> to your Applications folder</li>
-              <li><strong>Right-click</strong> the app and select <strong>Open</strong></li>
+              <li>Download the <code>.dmg</code> or <code>.zip</code> file above</li>
+              <li>If using DMG: Open it and drag <strong>M2 Film</strong> to Applications</li>
+              <li>If using ZIP: Unzip and drag <strong>M2 Film.app</strong> to Applications</li>
+              <li><strong>Right-click</strong> the app in Applications and select <strong>Open</strong></li>
               <li>Click <strong>Open</strong> in the security dialog</li>
+              <li>Done! Future opens will work normally</li>
             </ol>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <p className="font-semibold">⚠️ macOS Security Note</p>
               <p className="text-sm mt-2">
-                The first time you open M2 Film, macOS will show a security warning because 
-                the app isn&apos;t notarized yet. Right-click → Open bypasses this. 
-                The app is safe and open source.
+                M2 Film is not yet signed with an Apple Developer certificate ($99/year), 
+                so macOS Gatekeeper will block it by default. Using <strong>Right-click → Open</strong> bypasses 
+                this security check. The app is safe and <a href="https://github.com/eham1/m2-film-app" 
+                target="_blank" rel="noopener noreferrer" className="text-teal-600 underline">fully open source</a>.
               </p>
             </div>
 
+            <h3>If Right-Click Doesn&apos;t Work</h3>
+            <p>Open Terminal and run:</p>
+            <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto">
+              xattr -cr &quot;/Applications/M2 Film.app&quot;
+            </pre>
+            <p className="text-sm text-gray-600 mt-2">
+              This removes the macOS quarantine flag. Then open the app normally.
+            </p>
+
             <h3>System Requirements</h3>
             <ul>
-              <li>macOS 10.15 (Catalina) or later</li>
-              <li>Apple Silicon or Intel processor</li>
-              <li>50 MB free disk space</li>
+              <li>macOS 11.0 (Big Sur) or later</li>
+              <li>Apple Silicon (M1, M2, M3) - arm64 architecture</li>
+              <li>~300 MB free disk space</li>
+              <li>4 GB RAM minimum</li>
             </ul>
 
             <h3>Supported File Formats</h3>
