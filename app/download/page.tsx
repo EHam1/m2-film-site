@@ -40,12 +40,15 @@ export default function Download() {
             </ol>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
-              <p className="font-semibold">⚠️ macOS Security Note</p>
+              <p className="font-semibold">⚠️ Why Your Mac Will Yell at You</p>
               <p className="text-sm mt-2">
-                M2 Film is not yet signed with an Apple Developer certificate ($99/year), 
-                so macOS Gatekeeper will block it by default. Using <strong>Right-click → Open</strong> bypasses 
-                this security check. The app is safe and <a href="https://github.com/eham1/m2-film-app" 
-                target="_blank" rel="noopener noreferrer" className="text-teal-600 underline">fully open source</a>.
+                Look, I&apos;m a bum who doesn&apos;t have an Apple Developer account ($99/year) to 
+                &quot;sign&quot; this app properly. So when you download M2 Film, macOS will quarantine it and 
+                throw up scary warnings. <strong>The app is completely safe</strong> — it&apos;s{' '}
+                <a href="https://github.com/eham1/m2-film-app" 
+                target="_blank" rel="noopener noreferrer" className="text-teal-600 underline">fully open source</a> 
+                {' '}so you can inspect every line of code. Just <strong>right-click → Open</strong> to bypass 
+                the Gatekeeper check and you&apos;re golden.
               </p>
             </div>
 
