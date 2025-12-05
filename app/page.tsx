@@ -26,7 +26,7 @@ export default function Home() {
           
           <div className="mt-4 inline-block bg-yellow-100 border-2 border-yellow-400 rounded-lg px-4 py-2">
             <p className="text-sm text-gray-800">
-              ⚠️ <strong>Important:</strong> Follow the{' '}
+              <strong>Important:</strong> Follow the{' '}
               <Link href="/download" className="text-teal-600 underline font-semibold hover:text-teal-700">
                 installation instructions
               </Link>

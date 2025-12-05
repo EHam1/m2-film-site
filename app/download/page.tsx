@@ -18,10 +18,10 @@ export default function Download() {
             Free metadata editor for film photographers. Available for macOS.
           </p>
 
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-12 border-4 border-gray-900">
-            <h2 className="text-2xl font-bold mb-4">Latest Version</h2>
+          <div className="bg-white rounded-lg shadow-lg p-12 mb-12 border-4 border-gray-900 text-center max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Latest Version</h2>
             <DownloadButton />
-            <p className="mt-4 text-sm text-gray-600">
+            <p className="mt-6 text-sm text-gray-600">
               Version 1.0.0 • macOS 11.0 (Big Sur) or later • Apple Silicon (M1/M2/M3)
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function Download() {
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
               <p className="font-semibold text-lg">⚠️ Why Your Mac Will Block This App</p>
               <p className="text-sm mt-2">
-                Look, I&apos;m a bum who doesn&apos;t have an Apple Developer account ($99/year) to 
+                I&apos;m a bum who doesn&apos;t have an Apple Developer account ($99/year) to 
                 &quot;sign&quot; this app properly. So macOS will quarantine it and say it&apos;s &quot;damaged.&quot;
                 {' '}<strong>The app is completely safe</strong> — it&apos;s{' '}
                 <a href="https://github.com/eham1/m2-film-app" 
@@ -81,16 +81,6 @@ export default function Download() {
               <li>JPEG (.jpg, .jpeg)</li>
               <li>TIFF (.tif, .tiff)</li>
             </ul>
-
-            <h3>Getting Started</h3>
-            <ol>
-              <li>Launch M2 Film</li>
-              <li>Drag photos from a single folder into the app</li>
-              <li>Select photos you want to edit</li>
-              <li>Fill in metadata (timestamp, location, film stock, camera)</li>
-              <li>Click <strong>Write Changes</strong></li>
-              <li>Your photos now have complete metadata!</li>
-            </ol>
 
             <h3>Backups</h3>
             <p>
