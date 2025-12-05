@@ -23,6 +23,16 @@ export default function Home() {
           <p className="mt-6 text-sm text-gray-600">
             Free download • macOS 10.15+
           </p>
+          
+          <div className="mt-4 inline-block bg-yellow-100 border-2 border-yellow-400 rounded-lg px-4 py-2">
+            <p className="text-sm text-gray-800">
+              ⚠️ <strong>Important:</strong> Follow the{' '}
+              <Link href="/download" className="text-teal-600 underline font-semibold hover:text-teal-700">
+                installation instructions
+              </Link>
+              {' '}to avoid errors while opening the app
+            </p>
+          </div>
         </div>
       </section>
 
@@ -51,7 +61,7 @@ export default function Home() {
             </a>
           </div>
           <p className="text-xs text-gray-500">
-            © 2024 M2 Film • Made for film photographers
+            © 2025 M2 Film • Made for OCD film photographers
           </p>
         </div>
       </footer>
