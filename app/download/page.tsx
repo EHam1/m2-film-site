@@ -68,6 +68,13 @@ export default function Download() {
               Future opens won&apos;t require any special steps!
             </p>
 
+            <hr className="my-12 border-t-2 border-gray-300" />
+
+            <h2 className="text-3xl font-bold mb-6">Additional Information</h2>
+            <p className="text-gray-600 mb-8 italic">
+              Reference material, troubleshooting, and technical details
+            </p>
+
             <h3>System Requirements</h3>
             <ul>
               <li>macOS 11.0 (Big Sur) or later</li>
@@ -82,7 +89,7 @@ export default function Download() {
               <li>TIFF (.tif, .tiff)</li>
             </ul>
 
-            <h3>Backups</h3>
+            <h3>Automatic Backups</h3>
             <p>
               M2 Film automatically backs up your original files before making changes. 
               Backups are saved in a <code>m2-film-backups/</code> folder next to your photos.
