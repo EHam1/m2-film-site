@@ -29,7 +29,7 @@ export default function Download() {
           <div className="prose prose-lg">
             <h2>Installation Instructions</h2>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-6">
               <p className="font-semibold text-lg">⚠️ Why Your Mac Will Block This App</p>
               <p className="text-sm mt-2">
                 I&apos;m a bum who doesn&apos;t have an Apple Developer account ($99/year) to 
@@ -52,7 +52,7 @@ export default function Download() {
             <p className="font-semibold">
               macOS will block the app from opening. You MUST run this Terminal command:
             </p>
-            <div className="bg-red-50 border-2 border-red-400 p-4 rounded my-4">
+            <div className="bg-red-50 border-2 border-red-400 p-6 rounded my-4">
               <p className="text-sm font-semibold mb-2">Open Terminal and paste this:</p>
               <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm">
                 xattr -cr &quot;/Applications/M2 Film.app&quot;
